@@ -2,6 +2,8 @@ import { ReactNode } from 'react'
 import Link from 'next/link'
 import { css } from '@emotion/react'
 
+import List from '@/components/List'
+
 type HeaderProps = {
   children: ReactNode
 }
@@ -27,15 +29,14 @@ Header.Logo = () => {
 Header.Content = () => {
   return (
     <div css={contentContainerStyle}>
-      <ul css={ulStyle}></ul>
-      <ul css={ulStyle}>
-        <li css={listStyle}>
+      <List>
+        <List.Navigation>
           <Link href="/blog">Blog</Link>
-        </li>
-        <li css={listStyle}>
+        </List.Navigation>
+        <List.Navigation>
           <Link href="/about">About</Link>
-        </li>
-      </ul>
+        </List.Navigation>
+      </List>
     </div>
   )
 }
@@ -75,36 +76,6 @@ const contentContainerStyle = css`
   overflow-y: hidden;
   max-height: 100%;
   justify-content: space-between;
-`
-
-const ulStyle = css`
-  display: flex;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-`
-
-const listStyle = css`
-  height: 100%;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  padding: 0 8px;
-  color: #4e5968;
-  > a {
-    padding: 12px 10px;
-    font-size: 15px;
-    line-height: 20px;
-    border-radius: 8px;
-    border: 0;
-    cursor: pointer;
-    background-color: transparent;
-    text-decoration: none;
-    text-align: left;
-  }
-  > a:hover {
-    background-color: #f2f4f6;
-  }
 `
 
 export default Header
