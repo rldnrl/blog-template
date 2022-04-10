@@ -1,5 +1,5 @@
 {
-  "name": "next-boilerplate",
+  "name": "blog-template",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -13,6 +13,7 @@
     "@emotion/react": "11.5.0",
     "@emotion/server": "11.4.0",
     "@emotion/styled": "11.3.0",
+    "@nextui-org/react": "^1.0.8-beta.5",
     "axios": "^0.26.0",
     "emotion-normalize": "^11.0.1",
     "esbuild": "^0.14.25",
