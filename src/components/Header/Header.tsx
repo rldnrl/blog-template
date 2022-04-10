@@ -2,7 +2,7 @@ import { ReactNode } from 'react'
 import Link from 'next/link'
 import { css } from '@emotion/react'
 
-import List from '@/components/List'
+import List from 'src/components/List'
 
 type HeaderProps = {
   children: ReactNode
